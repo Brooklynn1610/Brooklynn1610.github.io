@@ -3,122 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Beautiful GitHub Page</title>
+    <title>Minimalist Page</title>
     <style>
-        /* CSS to make the page "pretty" */
+        /* Simple, clean, minimalist CSS */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+            font-family: sans-serif;
+            max-width: 600px; /* Keeps the text from stretching too far */
+            margin: 40px auto; /* Centers the content */
+            padding: 20px;
             color: #333;
-            margin: 0;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            font-size: 2.5em;
-            margin-top: 0;
-        }
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #7f8c8d;
-            font-weight: 500;
-        }
-        p {
             line-height: 1.6;
         }
+        h1, h2, h3 {
+            color: #111;
+        }
         a {
-            color: #3498db;
+            color: #0066cc;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
         }
         a:hover {
-            color: #2980b9;
             text-decoration: underline;
         }
-        /* Table Styling */
+        /* Basic Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
+            margin-top: 15px;
         }
         th, td {
-            border: 1px solid #ecf0f1;
-            padding: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
             text-align: left;
         }
         th {
-            background-color: #3498db;
-            color: white;
-            font-weight: 600;
+            background-color: #f4f4f4;
         }
-        tr:nth-child(even) {
-            background-color: #f9fbfd;
-        }
-        .merged-cell {
-            background-color: #e8f4f8;
+        .merged-center {
             text-align: center;
             font-style: italic;
-            color: #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Welcome to My Website</h1>
-        
-        <h2>About This Project</h2>
-        
-        <h3>The Requirements</h3>
-        <p>This page was built to demonstrate how to launch a simple, elegant website using <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. It utilizes internal CSS to keep everything contained in a single file.</p>
-
-        <h2>Project Schedule</h2>
-        <table>
-            <tr>
-                <th>Day</th>
-                <th>Phase 1</th>
-                <th>Phase 2</th>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>Design Mockups</td>
-                <td>Content Writing</td>
-            </tr>
-            <tr>
-                <td>Tuesday</td>
-                <td colspan="2" class="merged-cell">Team Review & Approvals (All Day)</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td rowspan="2">Frontend Development</td>
-                <td>Quality Assurance</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-                <td>Bug Fixing</td>
-            </tr>
-        </table>
-        
-        <h2>Connect With Me</h2>
-        <p>If you want to see more repositories, feel free to visit my <a href="https://github.com/" target="_blank">GitHub Profile</a>.</p>
-    </div>
+    <h1>My Simple Website</h1>
+    
+    <h2>Overview</h2>
+    <p>This is a cleaner, lightweight webpage hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+    
+    <h3>Project Details</h3>
+    
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Write HTML</td>
+            <td>Complete</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="merged-center">Review Phase (Merged Cell)</td>
+        </tr>
+        <tr>
+            <td>Publish to GitHub</td>
+            <td>Pending</td>
+        </tr>
+    </table>
 
 </body>
 </html>
