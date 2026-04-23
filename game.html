@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purr-fect Cat Trivia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* A soft, playful background color */
+            background-color: #fff0f5; 
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .cat-icon {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 quiz-container">
+    <div class="text-center mb-4">
+        <div class="cat-icon">🐱</div>
+        <h1 class="text-danger">Purr-fect Cat Trivia</h1>
+        <p class="text-muted">Test your feline knowledge!</p>
+    </div>
+    
+    <div class="card shadow-sm border-danger border-opacity-25" id="game-card">
+        <div class="card-body">
+            <h5 class="card-title text-muted">Question <span id="question-number">1</span> of <span id="total-questions">3</span></h5>
+            <h3 class="card-text mt-3 mb-4" id="question-text">Loading question...</h3>
+            
+            <div id="options-container" class="d-grid gap-2">
+                </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-danger border-opacity-25 d-none" id="result-card">
+        <div class="card-body text-center">
+            <div class="cat-icon mb-2">🐾</div>
+            <h2 class="card-title mb-3">Game Over!</h2>
+            <h4 class="mb-4">You scored <span id="score" class="text-success fw-bold">0</span> out of <span id="final-total">4</span>.</h4>
+            <button class="btn btn-danger btn-lg" onclick="startGame()">Play Again</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 1. JSON Data (Raw JSON string with Cat Trivia)
+    const jsonString = `[
+        {
+            "question": "What is a group of adult cats called?",
+            "options": ["A clowder", "A flock", "A herd", "A pack"],
+            "correctIndex": 0
+        },
+        {
+            "question": "How many toes does a cat usually have on their front paws?",
+            "options": ["Four", "Five", "Six", "Seven"],
+            "correctIndex": 1
+        },
+        {
+            "question": "What primary function do a cat's whiskers serve?",
+            "options": ["Enhancing their sense of smell", "Showing affection", "Spatial awareness and balance", "Regulating body temperature"],
+            "correctIndex": 2
+        },
+        {
+            "question": "Which of these famous fictional cats is known for loving lasagna?",
+            "options": ["Tom", "Sylvester", "Felix", "Garfield"],
+            "correctIndex": 3
+        }
+    ]`;
+
+    // 2. Parse JSON into JavaScript Objects
+    const quizData = JSON.parse(jsonString);
+
+    // 3. Game Variables
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    // 4. DOM Elements
+    const gameCard = document.getElementById('game-card');
+    const resultCard = document.getElementById('result-card');
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const questionNumberSpan = document.getElementById('question-number');
+    const totalQuestionsSpan = document.getElementById('total-questions');
+    const scoreSpan = document.getElementById('score');
+    const finalTotalSpan = document.getElementById('final-total');
+
+    // 5. Initialize Game
+    function startGame() {
+        currentQuestionIndex = 0;
+        score = 0;
+        
+        // Setup UI
+        totalQuestionsSpan.innerText = quizData.length;
+        finalTotalSpan.innerText = quizData.length;
+        gameCard.classList.remove('d-none');
+        resultCard.classList.add('d-none');
+        
+        loadQuestion();
+    }
+
+    // 6. Load a Question
+    function loadQuestion() {
+        const currentQuestion = quizData[currentQuestionIndex];
+        
+        // Update Question Text & Progress
+        questionText.innerText = currentQuestion.question;
+        questionNumberSpan.innerText = currentQuestionIndex + 1;
+        
+        // Clear previous options
+        optionsContainer.innerHTML = '';
+        
+        // Generate Buttons for Options
+        currentQuestion.options.forEach((option, index) => {
+            const button = document.createElement('button');
+            button.classList.add('btn', 'btn-outline-danger', 'text-start', 'fs-5', 'p-3');
+            button.innerText = option;
+            button.onclick = () => checkAnswer(index);
+            optionsContainer.appendChild(button);
+        });
+    }
+
+    // 7. Check Answer and Progress
+    function checkAnswer(selectedIndex) {
+        const currentQuestion = quizData[currentQuestionIndex];
+        
+        if (selectedIndex === currentQuestion.correctIndex) {
+            score++;
+        }
+        
+        currentQuestionIndex++;
+        
+        if (currentQuestionIndex < quizData.length) {
+            loadQuestion();
+        } else {
+            showResults();
+        }
+    }
+
+    // 8. Show Final Score
+    function showResults() {
+        gameCard.classList.add('d-none');
+        resultCard.classList.remove('d-none');
+        scoreSpan.innerText = score;
+    }
+
+    // FIX: Start the game as soon as the HTML is loaded, without waiting for external files
+    document.addEventListener('DOMContentLoaded', startGame);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
