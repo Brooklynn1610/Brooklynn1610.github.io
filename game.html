@@ -49,7 +49,6 @@
 </div>
 
 <script>
-    // 1. JSON Data (Raw JSON string with Cat Trivia)
     const jsonString = `[
         {
             "question": "What is a group of adult cats called?",
@@ -73,10 +72,8 @@
         }
     ]`;
 
-    // 2. Parse JSON into JavaScript Objects
     const quizData = JSON.parse(jsonString);
 
-    // 3. Game Variables
     let currentQuestionIndex = 0;
     let score = 0;
 
@@ -90,7 +87,6 @@
     const scoreSpan = document.getElementById('score');
     const finalTotalSpan = document.getElementById('final-total');
 
-    // 5. Initialize Game
     function startGame() {
         currentQuestionIndex = 0;
         score = 0;
@@ -104,18 +100,17 @@
         loadQuestion();
     }
 
-    // 6. Load a Question
+   
     function loadQuestion() {
         const currentQuestion = quizData[currentQuestionIndex];
-        
-        // Update Question Text & Progress
+    
         questionText.innerText = currentQuestion.question;
         questionNumberSpan.innerText = currentQuestionIndex + 1;
         
-        // Clear previous options
+   
         optionsContainer.innerHTML = '';
         
-        // Generate Buttons for Options
+       
         currentQuestion.options.forEach((option, index) => {
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-outline-danger', 'text-start', 'fs-5', 'p-3');
@@ -125,7 +120,7 @@
         });
     }
 
-    // 7. Check Answer and Progress
+    
     function checkAnswer(selectedIndex) {
         const currentQuestion = quizData[currentQuestionIndex];
         
@@ -142,14 +137,12 @@
         }
     }
 
-    // 8. Show Final Score
     function showResults() {
         gameCard.classList.add('d-none');
         resultCard.classList.remove('d-none');
         scoreSpan.innerText = score;
     }
 
-    // FIX: Start the game as soon as the HTML is loaded, without waiting for external files
     document.addEventListener('DOMContentLoaded', startGame);
 </script>
 
