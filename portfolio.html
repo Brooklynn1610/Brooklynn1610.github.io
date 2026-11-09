@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio | Tu Binh Truong</title>
+<meta name="description" content="Projects by Tu Binh Truong.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<!-- Bootstrap 5.3 + Bootstrap Icons (from getbootstrap.com) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar: adapted from Bootstrap "Navbars" example -->
+<nav class="navbar navbar-expand-lg sticky-top py-3">
+<div class="container">
+<a class="navbar-brand fs-4" href="index.html">Tu Binh Truong<span class="brand-dot"></span></a>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto gap-1 mt-3 mt-lg-0">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<header class="page-header py-5">
+<div class="container py-lg-4 fade-up">
+<p class="eyebrow mb-2">Portfolio</p>
+<h1 class="display-5 fw-bold mb-3">Things I've <span class='text-gradient'>built</span></h1>
+<p class="lead text-secondary col-lg-7 mb-0">IoT systems, web apps and app designs. Filter by category, and try the live demos hosted right here.</p>
+</div>
+</header>
+
+<!-- Gallery: adapted from Bootstrap "Album" example -->
+<section class="container py-5">
+<div class="d-flex flex-wrap gap-2 justify-content-center mb-5" id="filters" role="group" aria-label="Filter projects">
+<button class="btn btn-plum" data-filter="all">All</button>
+<button class="btn btn-outline-plum" data-filter="iot"><i class="bi bi-cpu me-1"></i>IoT</button>
+<button class="btn btn-outline-plum" data-filter="web"><i class="bi bi-window me-1"></i>Web</button>
+<button class="btn btn-outline-plum" data-filter="design"><i class="bi bi-palette me-1"></i>UX/UI</button>
+</div>
+<div class="row g-4" id="projects">
+<div class="col-md-6 col-lg-4 project-item" data-cat="iot">
+<div class="soft-card project-card h-100 d-flex flex-column">
+<img src="images/smart-farm.svg" class="w-100" alt="Smart farming IoT illustration" loading="lazy">
+<div class="p-4 d-flex flex-column flex-grow-1">
+<div class="mb-2"><span class="tag">C</span><span class="tag">MQTT</span><span class="tag">Arduino</span><span class="tag">Ubuntu</span></div>
+<h3 class="h5 fw-bold">Smart Farming System</h3>
+<p class="text-secondary small flex-grow-1">An IoT system for farms and gardens: an Arduino with several sensors, an open-source website to watch temperature and humidity, and a mobile app to control the water pump, lights and fan. Built while leading my AI-IoT hackathon team.</p>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-item" data-cat="iot">
+<div class="soft-card project-card h-100 d-flex flex-column">
+<img src="images/smart-home.svg" class="w-100" alt="Smart home automation illustration" loading="lazy">
+<div class="p-4 d-flex flex-column flex-grow-1">
+<div class="mb-2"><span class="tag">Raspberry Pi</span><span class="tag">Flask</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div>
+<h3 class="h5 fw-bold">Smart Home Automation</h3>
+<p class="text-secondary small flex-grow-1">Remote control of household appliances from a mobile app. Motion, temperature and light sensors automate lighting and climate; a Flask back end handles authentication with encrypted data transmission.</p>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-item" data-cat="design">
+<div class="soft-card project-card h-100 d-flex flex-column">
+<img src="images/academiaos.svg" class="w-100" alt="AcademiaOS app mockup illustration" loading="lazy">
+<div class="p-4 d-flex flex-column flex-grow-1">
+<div class="mb-2"><span class="tag">UX/UI</span><span class="tag">SQL</span></div>
+<h3 class="h5 fw-bold">AcademiaOS</h3>
+<p class="text-secondary small flex-grow-1">An offline planner for students and workers: schedule events, track your mood, get a daily summary and reminders for important days.</p>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-item" data-cat="web">
+<div class="soft-card project-card h-100 d-flex flex-column">
+<img src="images/sokucom.svg" class="w-100" alt="Sokucom landing page illustration" loading="lazy">
+<div class="p-4 d-flex flex-column flex-grow-1">
+<div class="mb-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">WordPress</span></div>
+<h3 class="h5 fw-bold">Sokucom</h3>
+<p class="text-secondary small flex-grow-1">Project website and landing page that explains the software to clients, plus an API integration that issues client IDs and passwords.</p>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-item" data-cat="web">
+<div class="soft-card project-card h-100 d-flex flex-column">
+<img src="images/cat-trivia.svg" class="w-100" alt="Cat trivia game illustration" loading="lazy">
+<div class="p-4 d-flex flex-column flex-grow-1">
+<div class="mb-2"><span class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">JSON</span></div>
+<h3 class="h5 fw-bold">Purr-fect Cat Trivia</h3>
+<p class="text-secondary small flex-grow-1">A cheerful quiz game that loads questions from JSON, tracks your score and lets you play again.</p>
+<div><a href="game.html" class="btn btn-sm btn-plum me-1"><i class="bi bi-box-arrow-up-right me-1"></i>Play</a><a href="https://github.com/Brooklynn1610/Brooklynn1610.github.io" target="_blank" rel="noopener" class="btn btn-sm btn-outline-plum"><i class="bi bi-github me-1"></i>Code</a></div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-item" data-cat="web">
+<div class="soft-card project-card h-100 d-flex flex-column">
+<img src="images/friends.svg" class="w-100" alt="Friends directory illustration" loading="lazy">
+<div class="p-4 d-flex flex-column flex-grow-1">
+<div class="mb-2"><span class="tag">JavaScript</span><span class="tag">Fetch API</span><span class="tag">REST</span></div>
+<h3 class="h5 fw-bold">Friends Directory</h3>
+<p class="text-secondary small flex-grow-1">Pulls friend records from a Node.js REST API on Heroku. Load everyone or look up a single friend by ID, with friendly error handling.</p>
+<div><a href="friends1.html" class="btn btn-sm btn-plum me-1">Version 1</a><a href="friends2.html" class="btn btn-sm btn-outline-plum">Version 2</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="container py-4">
+<div class="cta p-5 text-center">
+<h2 class="display-6 fw-bold mb-3">Want to see the code?</h2>
+<p class="lead opacity-75 mb-4">Browse my repositories on GitHub.</p>
+<a href="https://github.com/Brooklynn1610" target="_blank" rel="noopener" class="btn btn-light btn-lg"><i class="bi bi-github me-2"></i>Visit GitHub</a>
+</div>
+</section>
+<script>
+document.querySelectorAll('#filters button').forEach(btn => {
+btn.addEventListener('click', () => {
+document.querySelectorAll('#filters button').forEach(b => { b.classList.remove('btn-plum'); b.classList.add('btn-outline-plum'); });
+btn.classList.add('btn-plum'); btn.classList.remove('btn-outline-plum');
+const f = btn.dataset.filter;
+document.querySelectorAll('.project-item').forEach(p => p.classList.toggle('d-none', f !== 'all' && p.dataset.cat !== f));
+});
+});
+</script>
+
+<!-- Footer: adapted from Bootstrap "Footers" example -->
+<footer class="py-5 mt-5">
+<div class="container">
+<div class="row g-4 align-items-center">
+<div class="col-md-5">
+<div class="display-font fs-4 text-white">Tu Binh Truong<span class="brand-dot"></span></div>
+<p class="mb-0 small">Computer Science student · Seattle, WA</p>
+</div>
+<div class="col-md-4">
+<ul class="nav justify-content-md-center gap-3 small">
+<li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+<li><a href="resume.html">Resume</a></li><li><a href="portfolio.html">Portfolio</a></li>
+</ul>
+</div>
+<div class="col-md-3 text-md-end">
+<a class="social-btn" href="https://github.com/Brooklynn1610" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+</div>
+</div>
+<hr class="border-secondary my-4">
+<p class="small mb-0">&copy; 2026 Tu Binh Truong · Built with <a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank" rel="noopener">Bootstrap 5</a> &amp; hosted on GitHub Pages.</p>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

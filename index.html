@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Tu Binh Truong</title>
+<meta name="description" content="Portfolio and resume of Tu Binh Truong, Computer Science student in Seattle.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<!-- Bootstrap 5.3 + Bootstrap Icons (from getbootstrap.com) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar: adapted from Bootstrap "Navbars" example -->
+<nav class="navbar navbar-expand-lg sticky-top py-3">
+<div class="container">
+<a class="navbar-brand fs-4" href="index.html">Tu Binh Truong<span class="brand-dot"></span></a>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto gap-1 mt-3 mt-lg-0">
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero: adapted from Bootstrap "Heroes" example (image + text) -->
+<section class="hero">
+<div class="container py-5">
+<div class="row flex-lg-row-reverse align-items-center g-5 py-lg-5">
+<div class="col-10 col-sm-8 col-lg-6 mx-auto fade-up d2">
+<img src="images/hero.svg" class="d-block mx-lg-auto img-fluid hero-img" alt="Illustration of a laptop with code, IoT sensors and charts" width="700" height="520">
+</div>
+<div class="col-lg-6 fade-up">
+<p class="eyebrow mb-3"><i class="bi bi-geo-alt-fill"></i> Seattle, WA · CS @ Seattle Pacific University</p>
+<h1 class="fw-bold mb-4">Hi, I'm Tu Binh.<br>I build <span class="text-gradient">smart, connected</span> software.</h1>
+<p class="lead text-secondary mb-4">Computer Science student who loves turning ideas into working systems, from IoT farms and smart homes to clean, responsive web apps.</p>
+<div class="d-grid gap-2 d-sm-flex">
+<a href="portfolio.html" class="btn btn-plum btn-lg"><i class="bi bi-grid-1x2 me-2"></i>View my work</a>
+<a href="resume.html" class="btn btn-outline-plum btn-lg"><i class="bi bi-file-earmark-person me-2"></i>Resume</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats -->
+<section class="container" style="margin-top:-2.5rem; position:relative; z-index:2">
+<div class="soft-card p-4">
+<div class="row text-center g-3">
+<div class="col-6 col-md-3"><div class="stat-num">7+</div><div class="small text-secondary">Projects built</div></div>
+<div class="col-6 col-md-3"><div class="stat-num">5</div><div class="small text-secondary">Programming languages</div></div>
+<div class="col-6 col-md-3"><div class="stat-num">2</div><div class="small text-secondary">CS degrees (AS &amp; BS)</div></div>
+<div class="col-6 col-md-3"><div class="stat-num">1</div><div class="small text-secondary">Hackathon team led</div></div>
+</div>
+</div>
+</section>
+<!-- Features: adapted from Bootstrap "Features" example -->
+<section class="container py-5 mt-4">
+<div class="text-center mb-5">
+<p class="eyebrow mb-2">What I do</p>
+<h2 class="display-6 fw-bold">From sensors to screens</h2>
+</div>
+<div class="row g-4">
+<div class="col-md-4"><div class="soft-card h-100 p-4">
+<div class="feature-icon mb-3"><i class="bi bi-cpu"></i></div>
+<h3 class="h5 fw-bold">IoT &amp; Embedded</h3>
+<p class="text-secondary mb-0">Arduino and Raspberry Pi systems with temperature, humidity, motion and light sensors talking over MQTT.</p>
+</div></div>
+<div class="col-md-4"><div class="soft-card h-100 p-4">
+<div class="feature-icon peach mb-3"><i class="bi bi-window-stack"></i></div>
+<h3 class="h5 fw-bold">Web Development</h3>
+<p class="text-secondary mb-0">Responsive front ends with HTML, CSS, JavaScript and Bootstrap, connected to REST APIs and Flask back ends.</p>
+</div></div>
+<div class="col-md-4"><div class="soft-card h-100 p-4">
+<div class="feature-icon mb-3"><i class="bi bi-people"></i></div>
+<h3 class="h5 fw-bold">Team Leadership</h3>
+<p class="text-secondary mb-0">Planned, delegated and shipped projects as a hackathon team lead and in engineering group work.</p>
+</div></div>
+</div>
+</section>
+<!-- Featured work -->
+<section class="container py-4">
+<div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+<div><p class="eyebrow mb-2">Featured</p><h2 class="display-6 fw-bold mb-0">Recent projects</h2></div>
+<a href="portfolio.html" class="btn btn-outline-plum">All projects <i class="bi bi-arrow-right"></i></a>
+</div>
+<div class="row g-4">
+<div class="col-md-4"><div class="soft-card project-card h-100">
+<img src="images/smart-farm.svg" class="w-100" alt="Smart farming IoT illustration">
+<div class="p-4"><h3 class="h5 fw-bold">Smart Farming System</h3><p class="text-secondary small mb-0">Arduino + sensors + MQTT, with a web dashboard and mobile app to monitor and control pumps, lights and fans.</p></div>
+</div></div>
+<div class="col-md-4"><div class="soft-card project-card h-100">
+<img src="images/smart-home.svg" class="w-100" alt="Smart home automation illustration">
+<div class="p-4"><h3 class="h5 fw-bold">Smart Home Automation</h3><p class="text-secondary small mb-0">Raspberry Pi, IoT sensors and a Flask back end with authentication and encrypted data transmission.</p></div>
+</div></div>
+<div class="col-md-4"><div class="soft-card project-card h-100">
+<img src="images/cat-trivia.svg" class="w-100" alt="Cat trivia game illustration">
+<div class="p-4"><h3 class="h5 fw-bold">Purr-fect Cat Trivia</h3><p class="text-secondary small mb-3">A playful Bootstrap quiz game driven by JSON data.</p>
+<a href="game.html" class="btn btn-sm btn-plum">Play it live</a></div>
+</div></div>
+</div>
+</section>
+<!-- CTA -->
+<section class="container py-5">
+<div class="cta p-5 text-center">
+<h2 class="display-6 fw-bold mb-3">Let's build something together</h2>
+<p class="lead opacity-75 mb-4">Check out my code on GitHub or read more about my background.</p>
+<a href="https://github.com/Brooklynn1610" target="_blank" rel="noopener" class="btn btn-light btn-lg me-sm-2 mb-2 mb-sm-0"><i class="bi bi-github me-2"></i>GitHub</a>
+<a href="about.html" class="btn btn-outline-light btn-lg">About me</a>
+</div>
+</section>
+
+<!-- Footer: adapted from Bootstrap "Footers" example -->
+<footer class="py-5 mt-5">
+<div class="container">
+<div class="row g-4 align-items-center">
+<div class="col-md-5">
+<div class="display-font fs-4 text-white">Tu Binh Truong<span class="brand-dot"></span></div>
+<p class="mb-0 small">Computer Science student · Seattle, WA</p>
+</div>
+<div class="col-md-4">
+<ul class="nav justify-content-md-center gap-3 small">
+<li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+<li><a href="resume.html">Resume</a></li><li><a href="portfolio.html">Portfolio</a></li>
+</ul>
+</div>
+<div class="col-md-3 text-md-end">
+<a class="social-btn" href="https://github.com/Brooklynn1610" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+</div>
+</div>
+<hr class="border-secondary my-4">
+<p class="small mb-0">&copy; 2026 Tu Binh Truong · Built with <a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank" rel="noopener">Bootstrap 5</a> &amp; hosted on GitHub Pages.</p>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
